@@ -1,0 +1,29 @@
+{
+  "name": "citymap-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeyilong123/citymap-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeyilong123/citymap-server/issues"
+  },
+  "homepage": "https://github.com/yeyilong123/citymap-server#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "glob": "^7.1.6",
+    "koa": "^2.13.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.0.0",
+    "koa2-cors": "^2.0.6",
+    "mongoose": "^5.12.4"
+  }
+}
