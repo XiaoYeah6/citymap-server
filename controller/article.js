@@ -25,7 +25,7 @@ router.post("/writeArticle", async (ctx) => {
 router.get("/getArticle", async (ctx) => {
   const Article = mongoose.model("Article");
   await Article.find({ cityId: ctx.query.cityId })
-    .sort({ createDate: -1 })
+    .sort({ '_id': -1 })
     .skip(parseInt(ctx.query.start))
     .limit(parseInt(ctx.query.limit))
     .exec()
