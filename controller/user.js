@@ -1,6 +1,7 @@
 const Router = require("koa-router");
 let router = new Router();
 const mongoose = require("mongoose");
+const Koa = require('koa');
 
 router.post("/registUser", async (ctx) => {
   //获取model
