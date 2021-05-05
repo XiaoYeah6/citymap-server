@@ -6,10 +6,12 @@ const articleSchema = new Schema({
     userName: String,
     userImg: String,
     text: String,
-    imgs: [],
+    imgsDate: Object,
     createDate: {type: Date, default: Date.now()},
     address: String,
-    cityId: String,
+    regionId: String,
+    imgs: [],
+    marker: [],
 })
 
 mongoose.model('Article', articleSchema);

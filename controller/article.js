@@ -22,12 +22,21 @@ router.post("/writeArticle", async (ctx) => {
     });
 });
 
-router.get("/getArticle", async (ctx) => {
+router.get("/getArticleById", async (ctx) => {
   const Article = mongoose.model("Article");
-  await Article.find({ cityId: ctx.query.cityId })
+  await Article.find({ regionId: ctx.query.regionId })
     .sort({ '_id': -1 })
-    .skip(parseInt(ctx.query.start))
-    .limit(parseInt(ctx.query.limit))
+    .exec()
+    .then((res) => {
+      ctx.body = res;
+    })
+    .catch((err) => {});
+});
+
+router.post("/getArticleByMarker", async (ctx) => {
+  const Article = mongoose.model("Article");
+  await Article.find({ marker: ctx.request.body.markerPoint })
+    .sort({ '_id': -1 })
     .exec()
     .then((res) => {
       ctx.body = res;
